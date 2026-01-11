@@ -100,9 +100,9 @@ Contribuições são bem-vindas.
 
 ## ✉️ Contato
 
-- **Email:** seu.email@exemplo.com  
-- **LinkedIn:** https://linkedin.com/in/seu-perfil  
-- **GitHub:** https://github.com/seu-usuario  
+- **Email:** ciaolasse@outlook.com  
+- **LinkedIn:** https://www.linkedin.com/in/caiolassse/ 
+- **GitHub:** https://github.com/ciaolasse  
 
 ---
 
