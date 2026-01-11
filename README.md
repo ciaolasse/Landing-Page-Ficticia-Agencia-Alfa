@@ -12,21 +12,6 @@ Desenvolvida com **HTML5**, **CSS3** e **JavaScript**, a página apresenta um la
 
 ---
 
-## 🚀 Demonstração
-
-A página inicial da Agência Alfa conta com:
-
-- Cabeçalho com logotipo e menu de navegação responsivo  
-- Seção *hero* com chamada principal e botão de contato  
-- Cards destacando as especialidades da agência  
-- Formulário de contato  
-- Rodapé com links sociais e informações de contato  
-
-> Você pode adicionar uma imagem de preview do projeto, por exemplo:  
-> `![Preview do site](./images/preview.png)`
-
----
-
 ## 🛠 Tecnologias Utilizadas
 
 - **HTML5**  
