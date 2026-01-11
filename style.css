@@ -1,0 +1,136 @@
+/* CONFIGURAÇÕES GERAIS */
+:root {
+    --accent: #D2A831;
+    --bg: #000;
+    --text: #f2f2f2;
+    --muted: #bfbfbf;
+    --bg-input: #2c2c2c;
+    --transition: .3s ease;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.interface { width: 90%; max-width: 1280px; margin: 0 auto; }
+.flex { display: flex; gap: 24px; }
+.dm-serif-text-regular-box { font-family: "DM Serif Text", serif; }
+
+/* LOGOS COM TAMANHO ORIGINAL E EFEITO DE BOTÃO */
+.logo img { display: block; transition: var(--transition); }
+.logo a:hover img { 
+    transform: scale(1.05); 
+    filter: drop-shadow(0 0 10px rgba(210, 168, 49, 0.4)); 
+}
+
+/* HEADER */
+header { padding: 25px 0; }
+header .interface { display: flex; align-items: center; justify-content: space-between; }
+.menu-desktop ul { display: flex; list-style: none; gap: 40px; }
+.menu-desktop a { color: var(--muted); text-decoration: none; transition: var(--transition); }
+.menu-desktop a:hover { color: white; }
+
+/* ESTILO PADRÃO DOS BOTÕES */
+button {
+    background: var(--accent);
+    color: black;
+    border: none;
+    padding: 12px 35px;
+    border-radius: 30px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+button:hover { 
+    transform: scale(1.05); 
+    box-shadow: 0 0 15px rgba(210, 168, 49, 0.6); 
+}
+
+/* SEÇÃO HERO */
+.topo-do-site { padding: 20px 0 80px 0; }
+.topo-flex { align-items: center; justify-content: space-between; }
+.txt-topo-site h1 { font-size: 58px; margin-bottom: 20px; }
+.dot { color: var(--accent); }
+
+/* ESPAÇAMENTO SOLICITADO (GAP ENTRE TEXTO E BOTÃO) */
+.descricao-hero {
+    margin-bottom: 60px; /* Aumentado para criar o gap visual */
+}
+
+/* CENTRALIZAÇÃO DO BOTÃO HERO EM AMBAS VERSÕES */
+.container-btn-hero {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.img-topo-site img {
+    max-width: 100%;
+    animation: flutuar 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar { from { transform: translateY(0); } to { transform: translateY(-20px); } }
+
+/* ESPECIALIDADES */
+.especialidades { padding: 80px 0; }
+.titulo { text-align: center; font-size: 38px; margin-bottom: 40px; }
+.titulo span { color: var(--accent); }
+.container-especialidades { display: flex; gap: 24px; }
+
+.especialidades-box {
+    flex: 1; border: 1px solid #ffffff15; padding: 40px 30px; 
+    border-radius: 20px; text-align: center; background: #080808; transition: var(--transition);
+}
+.especialidades-box:hover { transform: translateY(-10px); border-color: var(--accent); }
+.especialidades-box i { font-size: 50px; color: var(--accent); margin-bottom: 20px; display: block; }
+
+/* FORMULÁRIO */
+.formulario { padding: 80px 0; }
+form { max-width: 500px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px; }
+form input, form textarea { padding: 18px; border-radius: 12px; border: 1px solid #333; background: var(--bg-input); color: white; }
+.centralizar-btn { display: flex; justify-content: center; margin-top: 10px; }
+
+/* MENU MOBILE */
+.btn-abrir-menu { display: none; cursor: pointer; }
+.btn-abrir-menu i { font-size: 40px; color: var(--accent); }
+.menu-mobile { position: fixed; top: 0; right: 0; width: 0; height: 100vh; background: #000; z-index: 1000; overflow: hidden; transition: .5s; }
+.menu-mobile.abrir-menu { width: 70%; }
+.menu-mobile nav ul li a { display: block; padding: 20px 30px; color: white; text-decoration: none; font-size: 20px; text-align: right; }
+.overlay-menu { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.8); z-index: 998; }
+
+/* RODAPÉ */
+footer { padding: 60px 0; }
+.footer-row { display: flex; justify-content: space-between; align-items: center; }
+.btn-social button { width: 45px; height: 45px; border-radius: 50%; padding: 0; margin-left: 10px; display: flex; align-items: center; justify-content: center; }
+.line-footer.borda { border-top: 2px solid var(--accent); margin-top: 30px; padding-top: 20px; }
+.line-footer.borda p { display: flex; align-items: center; gap: 10px; justify-content: flex-start; }
+.line-footer.borda a { color: var(--text); text-decoration: none; }
+
+/* RESPONSIVIDADE MOBILE */
+@media (max-width: 640px) {
+    .menu-desktop, .header-actions .btn-contato { display: none; }
+    header .interface { justify-content: center; position: relative; }
+    .btn-abrir-menu { display: block; position: absolute; right: 0; }
+    
+    .topo-flex { flex-direction: column; text-align: center; }
+    .txt-topo-site { order: 2; }
+    .txt-topo-site h1 { font-size: 42px; }
+
+    /* Centralizar imagem pessoa no mobile */
+    .img-topo-site { order: 1; margin-bottom: 25px; display: flex; justify-content: center; width: 100%; }
+    .img-topo-site img { width: 85%; }
+
+    /* Cards em coluna no mobile */
+    .container-especialidades { flex-direction: column; align-items: center; }
+    .especialidades-box { width: 100%; }
+
+    /* Footer Mobile */
+    .footer-row { flex-direction: column; gap: 30px; text-align: center; }
+}
