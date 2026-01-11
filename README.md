@@ -73,24 +73,6 @@ A página inicial da Agência Alfa conta com:
 
 ---
 
-## 📦 Publicação no GitHub
-
-1. Crie um repositório público chamado `agencia-alfa`
-2. No terminal, dentro da pasta do projeto:
-   ```bash
-   git init
-   git add .
-   git commit -m "Primeiro commit: projeto Agência Alfa"
-   ```
-3. Conecte ao repositório remoto e envie os arquivos:
-   ```bash
-   git remote add origin https://github.com/seu-usuario/agencia-alfa.git
-   git branch -M main
-   git push -u origin main
-   ```
-
----
-
 ## 📂 Estrutura de Pastas
 
 ```text
